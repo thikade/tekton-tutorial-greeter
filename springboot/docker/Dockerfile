@@ -1,3 +1,3 @@
-FROM registry.access.redhat.com/ubi8/openjdk-11
+FROM default-route-openshift-image-registry.apps.uniqa-tst.pcap.at/openshift/openjdk-11-rhel8
 
 COPY deployments/*.jar /deployments/
