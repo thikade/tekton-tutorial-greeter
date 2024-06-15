@@ -11,7 +11,7 @@ items:
     subdomain: {{ .Release.Namespace }}
     tls:
       insecureEdgeTerminationPolicy: Redirect
-      terminationPolicy: edge    
+      termination: edge    
     port:
       targetPort: 8080
     to:
