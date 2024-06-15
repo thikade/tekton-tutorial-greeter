@@ -8,7 +8,10 @@ items:
     name: greeter
     namespace: {{ .Release.Namespace }}
   spec:
-    host: {{ .Release.Namespace }}.{{ .Values.appSuffix}}
+    subdomain: {{ .Release.Namespace }}
+    tls:
+      insecureEdgeTerminationPolicy: Redirect
+      terminationPolicy: edge    
     port:
       targetPort: 8080
     to:
