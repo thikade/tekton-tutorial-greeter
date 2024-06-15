@@ -9,6 +9,9 @@ items:
     namespace: {{ .Release.Namespace }}
   spec:
     subdomain: {{ .Release.Namespace }}
+    tls:
+      insecureEdgeTerminationPolicy: Redirect
+      terminationPolicy: edge    
     port:
       targetPort: 8080
     to:
